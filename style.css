@@ -1,4 +1,4 @@
-/* Reset & Base */
+/* ===================== RESET & BASE ===================== */
 * {
   margin: 0;
   padding: 0;
@@ -27,14 +27,14 @@ img {
   border-radius: 12px;
 }
 
-/* Buttons */
+/* ===================== BUTTONS ===================== */
 .btn-primary, .btn-secondary {
   display: inline-block;
   padding: 14px 28px;
   border-radius: 50px;
   font-weight: 600;
   text-decoration: none;
-  transition: 0.3s ease;
+  transition: all 0.3s ease;
   cursor: pointer;
   border: none;
 }
@@ -61,7 +61,7 @@ img {
   color: white;
 }
 
-/* HERO */
+/* ===================== HERO ===================== */
 .hero {
   background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)),
               url('https://images.pexels.com/photos/3112211/pexels-photo-3112211.jpeg');
@@ -70,6 +70,7 @@ img {
   height: 90vh;
   display: flex;
   align-items: center;
+  justify-content: center;
   text-align: center;
   color: white;
   padding: 0 20px;
@@ -89,7 +90,7 @@ img {
   margin-bottom: 2rem;
 }
 
-/* FEATURES */
+/* ===================== FEATURES ===================== */
 .features {
   padding: 80px 0;
   background: #fdf2f8;
@@ -114,7 +115,12 @@ img {
   font-size: 1.4rem;
 }
 
-/* PRODUCTS */
+.feature-item p {
+  font-size: 0.95rem;
+  color: #555;
+}
+
+/* ===================== PRODUCTS ===================== */
 .products {
   padding: 100px 0;
   text-align: center;
@@ -136,4 +142,190 @@ img {
   background: #fff;
   border-radius: 16px;
   overflow: hidden;
-  box-shadow: 0 10px 30px rgba(0,0
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+}
+
+.product-card img {
+  height: 240px;
+  object-fit: cover;
+}
+
+.product-card h4 {
+  margin: 1rem 0 0.5rem;
+  font-size: 1.3rem;
+}
+
+.price {
+  color: #e91e63;
+  font-weight: 600;
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+}
+
+/* ===================== TESTIMONIALS ===================== */
+.testimonials {
+  padding: 80px 0;
+  background: #f8f9fa;
+  text-align: center;
+}
+
+.testimonials h2 {
+  margin-bottom: 3rem;
+}
+
+.testimonial-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+}
+
+.testimonial {
+  background: #fff;
+  padding: 30px;
+  border-radius: 16px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+  font-style: italic;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.testimonial:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+.testimonial strong {
+  display: block;
+  margin-top: 1rem;
+  color: #e91e63;
+  font-style: normal;
+}
+
+/* ===================== CTA ===================== */
+.cta {
+  padding: 100px 0;
+  background: linear-gradient(135deg, #e91e63, #ad1457);
+  color: white;
+  text-align: center;
+}
+
+.cta h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.cta p {
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+}
+
+/* ===================== FOOTER ===================== */
+footer {
+  background: #1a1a1a;
+  color: #ddd;
+  padding: 60px 20px 20px;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 30px;
+  margin-bottom: 30px;
+}
+
+footer h3, footer h4 {
+  color: #fff;
+  margin-bottom: 1rem;
+}
+
+footer ul {
+  list-style: none;
+}
+
+footer ul li {
+  margin-bottom: 0.6rem;
+}
+
+footer ul li a {
+  color: #bbb;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+footer ul li a:hover {
+  color: #e91e63;
+}
+
+.social a {
+  font-size: 1.4rem;
+  color: #bbb;
+  margin-right: 15px;
+  transition: color 0.3s ease;
+}
+
+.social a:hover {
+  color: #e91e63;
+}
+
+.copyright {
+  text-align: center;
+  padding-top: 20px;
+  border-top: 1px solid #333;
+  color: #777;
+  font-size: 0.9rem;
+}
+
+/* ===================== RESPONSIVE ===================== */
+@media (max-width: 1024px) {
+  .hero h1 {
+    font-size: 3rem;
+  }
+  .products h2, .cta h2, .testimonials h2 {
+    font-size: 2.2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero {
+    height: 70vh;
+  }
+
+  .hero h1 {
+    font-size: 2.4rem;
+  }
+
+  .hero p {
+    font-size: 1rem;
+  }
+
+  .products, .cta, .features, .testimonials {
+    padding: 60px 0;
+  }
+
+  .product-card img {
+    height: 200px;
+  }
+}
+
+@media (max-width: 500px) {
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  .btn-primary, .btn-secondary {
+    padding: 12px 22px;
+  }
+
+  .feature-item i {
+    font-size: 2rem;
+  }
+
+  .testimonial {
+    padding: 20px;
+  }
+}
